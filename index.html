@@ -71,59 +71,37 @@
                 ['西本願寺', 25.0402702, 121.5066577],
                 ['西門紅樓', 25.0385655, 121.513098],
                 ['中華民國總統府', 25.0400826, 121.5119547],
-                // ['Fallon & Byrne', 53.343151, -6.263287],
-                // ['Clement & Pekoe', 53.341534, -6.26276],
                 ['my current location', latitude, longitude]
             ];
 
             // Info Window Content
             var infoWindowContent = [
                 ['<div class="info_content">' +
-                    '<h3>3fe</h3>' +
-                    '<p>32 Grand Canal Street Lower, Grand Canal Dock, Dublin 2</p>' +
+                    '<h3>寧夏夜市</h3>' +
+                    '<p>就是有點餓</p>' +
                     '<img src="images/3fe.jpg" width="200" height="200">' +
                     '</div>'
                 ],
                 ['<div class="info_content">' +
-                    '<h3>The Fumbally</h3>' +
-                    '<p>Fumbally Lane, Dublin 8</p>' +
+                    '<h3>西門夜市</h3>' +
+                    '<p>餓餓餓</p>' +
                     '<img src="images/thefumbally.jpg" width="200" height="200">' +
                     '</div>'
                 ],
                 ['<div class="info_content">' +
-                    '<h3>Brother Hubbard</h3>' +
-                    '<p>46 Harrington Street Dublin 8</p>' +
-                    '<img src="images/brotherhubbard.jpg" width="200" height="200">' +
+                    '<h3>台北市電影主題公園</h3>' +
                     '</div>'
                 ],
                 ['<div class="info_content">' +
-                    '<h3>Vice Coffee inc</h3>' +
-                    '<p>54 Middle Abbey St, Dublin 1</p>' +
-                    '<img src="images/vicecoffeeinc.jpg" width="200" height="200">' +
+                    '<h3>西本願寺</h3>' +
                     '</div>'
                 ],
                 ['<div class="info_content">' +
-                    '<h3>Roasted Brown</h3>' +
-                    '<p>1st Floor, Filmbase, Curved Street, Temple Bar, Dublin 2</p>' +
-                    '<img src="images/roastedbrown.jpg" width="200" height="200">' +
+                    '<h3>西門紅樓</h3>' +
                     '</div>'
                 ],
                 ['<div class="info_content">' +
-                    '<h3>Kaph</h3>' +
-                    '<p>31 Drury St, Dublin 2</p>' +
-                    '<img src="images/kaph-6.jpg" width="200" height="200">' +
-                    '</div>'
-                ],
-                ['<div class="info_content">' +
-                    '<h3>Fallon & Byrne</h3>' +
-                    '<p>17 Exchequer St, Dublin 2</p>' +
-                    '<img src="images/fallonandbyrne.jpg" width="200" height="200">' +
-                    '</div>'
-                ],
-                ['<div class="info_content">' +
-                    '<h3>Clement & Pekoe</h3>' +
-                    '<p>50 South William St, Dublin 2</p>' +
-                    '<img src="images/ClementPekoe.jpg" width="200" height="200">' +
+                    '<h3>中華民國總統府</h3>' +
                     '</div>'
                 ]
             ];
@@ -139,6 +117,7 @@
                 marker = new google.maps.Marker({
                     position: position,
                     map: map,
+                    label: i===markers.length-1 ? 'ME' : '',
                     title: markers[i][0]
                 });
 
